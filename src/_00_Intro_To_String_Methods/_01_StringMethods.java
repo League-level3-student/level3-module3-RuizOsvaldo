@@ -93,8 +93,13 @@ public class _01_StringMethods {
     // occurrence of String substring and the final occurrence
     // You can assume that substring will appear at least twice
     public static int distance(String s, String substring) {
-        return 0;
+        int firstIndex = s.indexOf(substring);  // First occurrence of substring
+        int lastIndex = s.lastIndexOf(substring);  // Final occurrence of substring
+
+        int distance = lastIndex - (firstIndex + substring.length());
+        return distance;
     }
+
 
     // Return true if String s is a palindrome
     // palindromes are words or phrases are read the same forward as backward.
